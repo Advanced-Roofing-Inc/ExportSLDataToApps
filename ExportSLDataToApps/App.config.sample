@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <startup> 
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />
+    </startup>
+
+   <connectionStrings>
+      <add name="SL" connectionString="Server=servername;Database=database;Integrated Security=true" />
+   </connectionStrings>
+
+   <appSettings>
+      <add key="ApiBaseUrl" value="api_url_with_trailing_slash" />
+      <add key="ApiUsername" value="api_username" />
+      <add key="ApiPassword" value="api_password" />
+   </appSettings>
+</configuration>
