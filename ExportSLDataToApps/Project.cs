@@ -18,11 +18,11 @@ namespace ExportSLDataToApps
          {
             var sqlText = "SELECT project, project_desc FROM PJPROJ WHERE status_pa = 'A'";
             var sqlCommand = new SqlCommand(sqlText, connection);
+            sqlCommand.Connection = connection;
 
             SqlDataReader reader = null;
-
             reader = sqlCommand.ExecuteReader();
-
+            
             while (reader.Read())
             {
                var project = new Project

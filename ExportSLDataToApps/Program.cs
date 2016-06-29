@@ -36,8 +36,8 @@ namespace ExportSLDataToApps
             var projects = Project.FetchActiveProjects(source);
 
             Console.WriteLine("Getting list of cost codes from SL...");
-            //var costCodes = CostCode.FetchCostCodes(source);
-            //Project.MapCostCodesToProjectList(projects, costCodes);
+            var costCodes = CostCode.FetchCostCodes(source);
+            Project.MapCostCodesToProjectList(projects, costCodes);
 
             // Send mapped project list to API
             Console.WriteLine("Sending projects to web API...");
@@ -53,8 +53,8 @@ namespace ExportSLDataToApps
 
             try
             {
-               //var response = client.Execute(request);
-               //Console.WriteLine(response.Content);
+               var response = client.Execute(request);
+               Console.WriteLine(response.Content);
             }
             catch (Exception e)
             {
@@ -63,8 +63,8 @@ namespace ExportSLDataToApps
             }
          }
                   
-         //Console.WriteLine("Press any key to exit...");
-         //Console.ReadKey();
+         Console.WriteLine("Press any key to exit...");
+         Console.ReadKey();
       }
    }
 }

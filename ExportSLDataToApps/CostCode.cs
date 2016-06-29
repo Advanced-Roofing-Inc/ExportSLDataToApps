@@ -17,6 +17,7 @@ namespace ExportSLDataToApps
          {
             var sqlText = "select pjt_entity, pjt_entity_desc, pjpent.project from PJPENT inner join PJPROJ on pjpent.project = pjproj.project and pjproj.status_pa = 'A'";
             var sqlCommand = new SqlCommand(sqlText, connection);
+            sqlCommand.Connection = connection;
 
             SqlDataReader reader = null;
             reader = sqlCommand.ExecuteReader();
