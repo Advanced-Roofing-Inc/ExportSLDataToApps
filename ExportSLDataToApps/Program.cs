@@ -63,8 +63,8 @@ namespace ExportSLDataToApps
             }
          }
                   
-         Console.WriteLine("Press any key to exit...");
-         Console.ReadKey();
+         //Console.WriteLine("Press any key to exit...");
+         //Console.ReadKey();
       }
    }
 }
