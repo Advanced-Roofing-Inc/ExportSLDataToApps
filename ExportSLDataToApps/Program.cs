@@ -47,6 +47,7 @@ namespace ExportSLDataToApps
             var apiUsername = ConfigurationManager.AppSettings["ApiUsername"];
             var apiPassword = ConfigurationManager.AppSettings["ApiPassword"];
 
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             var client = new RestClient(apiBaseUrl);
             client.Authenticator = new HttpBasicAuthenticator(apiUsername, apiPassword);
             var request = new RestRequest(Method.POST);
@@ -67,8 +68,8 @@ namespace ExportSLDataToApps
             }
          }
                   
-         //Console.WriteLine("Press any key to exit...");
-         Console.ReadKey();
+         // Console.WriteLine("Press any key to exit...");
+         // Console.ReadKey();
       }
    }
 }
